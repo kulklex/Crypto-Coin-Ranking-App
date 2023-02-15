@@ -5,7 +5,7 @@ import {  Link  } from 'react-router-dom'
 const Footer = () => {
     return (<>
         <Typography.Title level={5} style={{color: 'white', textAlign: 'center' }}>
-            Cryptoverse <br/>
+            CryptoCoin <br/>
             All rights reserved
         </Typography.Title>
         <Space>
