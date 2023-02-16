@@ -5,22 +5,24 @@ import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import { Card, Col, Input, Row, Spin } from 'antd';
 
-const CryptoCurrencies = ({simplified}) => {
+const CryptoCurrencies = () => {
 
-    const count = simplified ? 10 : 100
 
-    const {data,  isFetching} = useGetCryptosQuery(count)
+    const {data ,  isFetching} = useGetCryptosQuery(100)
     
     const [cryptos, setCryptos] = useState([]);
     
     const [searchTerm, setSearchTerm] = useState('');
 
-    console.log(cryptos)
+    
 
     useEffect(() => {
+        setCryptos(data?.data?.coins)
 
-        const filteredData = data?.data?.coins?.filter((coin) => coin?.name.lowerCase().includes(searchTerm))
-        setCryptos(filteredData)
+        
+    const filteredData = data?.data?.coins.filter((item) => item.name.toLowerCase().includes(searchTerm))
+    if (filteredData) console.log(filteredData)
+    setCryptos(filteredData)
     }, [data, searchTerm])
 
     

@@ -2,7 +2,7 @@ import React from 'react';
 import millify from 'millify'
 import {Link} from 'react-router-dom'
 import {Typography, Row, Col, Statistic, Spin} from 'antd'
-import CryptoCurrencies from './CryptoCurrencies';
+import CryptoLimit from './CryptoLimit';
 import News from './News';
 
 
@@ -37,7 +37,7 @@ const HomePage = () => {
                 <Title level={ screen > 600 ? 2 : 5} className='home-title'>Top 10 Cryptocurrencies {screen > 600 ? 'in the world' : ''}</Title>
                 <Typography.Text className='show-more'><Link to="/cryptocurrencies">Show More</Link></Typography.Text>
             </div>
-            <CryptoCurrencies simplified />
+            <CryptoLimit  />
 
             <div className="home-heading-container">
                 <Title level={2} className='home-title'>Latest Crypto News</Title>
