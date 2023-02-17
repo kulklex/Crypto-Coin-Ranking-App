@@ -8,7 +8,7 @@ import { Card, Col, Input, Row, Spin } from 'antd';
 const CryptoCurrencies = () => {
 
 
-    const {data ,  isFetching} = useGetCryptosQuery(100)
+    const {data ,  isFetching} = useGetCryptosQuery(500)
     
     const [cryptos, setCryptos] = useState([]);
     
@@ -21,7 +21,7 @@ const CryptoCurrencies = () => {
 
         
     const filteredData = data?.data?.coins.filter((item) => item.name.toLowerCase().includes(searchTerm))
-    if (filteredData) console.log(filteredData)
+    
     setCryptos(filteredData)
     }, [data, searchTerm])
 

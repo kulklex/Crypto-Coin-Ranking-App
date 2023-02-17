@@ -18,7 +18,6 @@ const LineChart = ({coinHistory, currentPrice, coinName}) => {
         coinTimeStamp.push(moment.unix(coinHistory?.data?.history[i]?.timestamp).format("YY/MM/DD"))
     } 
 
-    console.log(coinHistory)
 
     const data = {
         labels: coinTimeStamp,

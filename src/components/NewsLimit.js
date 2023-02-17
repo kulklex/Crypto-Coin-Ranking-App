@@ -8,7 +8,7 @@ const {Title, Text} = Typography
 
 const News = () => {
     const {data, isFetching} = useGetCryptoNewsQuery()
-    console.log(data)
+   
 
     const [news, setNews] = useState([]);
 
