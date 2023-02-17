@@ -3,7 +3,7 @@ import millify from 'millify'
 import {Link} from 'react-router-dom'
 import {Typography, Row, Col, Statistic, Spin} from 'antd'
 import CryptoLimit from './CryptoLimit';
-import News from './News';
+import NewsLimit from './NewsLimit';
 
 
 import {useGetCryptosQuery} from '../services/cryptoApi'
@@ -23,7 +23,7 @@ const HomePage = () => {
     if(isFetching) return <Spin size="large"/>
 
     return (
-        <>
+        <div style={{margin: '15px'}}>
             <Title level={2} className='heading'>Global Crypto Stats</Title>   
             <Row>
                 <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats?.total} /></Col>
@@ -43,8 +43,8 @@ const HomePage = () => {
                 <Title level={2} className='home-title'>Latest Crypto News</Title>
                 <p  className='show-more'><Link to="/news">Show More</Link></p>
             </div>
-            <News simplified/>
-        </>
+            <NewsLimit/>
+        </div>
     );
 }
 

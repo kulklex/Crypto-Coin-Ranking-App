@@ -7,7 +7,6 @@ const cryptoApiHeaders = {
 }
 
 const options = {
-    method: 'GET',
     url: 'https://coinranking1.p.rapidapi.com',
     params: {
       referenceCurrencyUuid: 'yhjMzLPhuIDl',
@@ -27,7 +26,7 @@ export const cryptoApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl: options.url}),
     endpoints: (builder) => ({
         getCryptos: builder.query({
-            query: (count) => createRequest(`/coins?limit=${count}`)
+            query: (count) => createRequest(`/coinss?limit=${count}`)
         })
     })
 })

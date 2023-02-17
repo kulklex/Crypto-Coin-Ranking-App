@@ -10,12 +10,12 @@ import { Card, Col, Row, Spin } from 'antd';
 
 const CryptoLimit = () => {
 
-    const {data :{data},  isFetching} = useGetCryptosQuery(10)
+    const {data,  isFetching} = useGetCryptosQuery(10)
 
     const [cryptos, setCryptos] = useState([]);
 
     useEffect(() => {
-        setCryptos(data?.coins)
+        setCryptos(data?.data?.coins)
     }, [data])
     
     if (isFetching) return <Spin  size="large"  />
