@@ -39,14 +39,14 @@ export default function Navbar() {
 
         {activeMenu && <Menu theme='dark'>
           <Menu.Item icon={<HomeOutlined/>}>
-            <Link to='/'>Home</Link>
+            <Link to='/'>Cryptocurrencies</Link>
           </Menu.Item>
           <Menu.Item icon={<FundOutlined/>}>
-            <Link to='/cryptocurrencies'>Cryptocurrencies</Link>
+            <Link to='/rankings'>Rankings</Link>
           </Menu.Item>
-          <Menu.Item icon={<BulbOutlined/>}>
+          {/* <Menu.Item icon={<BulbOutlined/>}>
             <Link to='/news'>News</Link>
-          </Menu.Item>
+          </Menu.Item> */}
         </Menu>
         }
     </div>

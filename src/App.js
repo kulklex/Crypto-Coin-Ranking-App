@@ -14,10 +14,10 @@ export default function App() {
   <>
   <BrowserRouter>
     <Outlet>
-      <Routes>
-        <Route path='/' element={<HomePage/>} />
+      <Routes>        
+        <Route path='/' element={<CryptoCurrencies/>} />
+        <Route path='/rankings' element={<HomePage/>} />
         <Route path='/exchanges' element={<Exchanges/>} />
-        <Route path='/cryptocurrencies' element={<CryptoCurrencies/>} />
         <Route path='/crypto/:coinId' element={<CryptoDetails/>} />
         <Route path='/news' element={<News/>} />
       </Routes>
