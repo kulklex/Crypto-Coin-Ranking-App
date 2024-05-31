@@ -35,15 +35,15 @@ const HomePage = () => {
 
             <div className="home-heading-container">
                 <Title level={ screen > 600 ? 2 : 5} className='home-title'>Top 10 Cryptocurrencies {screen > 600 ? 'in the world' : ''}</Title>
-                <Typography.Text className='show-more'><Link to="/cryptocurrencies">Show More</Link></Typography.Text>
+                <Typography.Text className='show-more'><Link to="/">Show More</Link></Typography.Text>
             </div>
             <CryptoLimit  />
 
-            <div className="home-heading-container">
+            {/* <div className="home-heading-container">
                 <Title level={2} className='home-title'>Latest Crypto News</Title>
                 <p  className='show-more'><Link to="/news">Show More</Link></p>
             </div>
-            <NewsLimit/>
+            <NewsLimit/> */}
         </div>
     );
 }
